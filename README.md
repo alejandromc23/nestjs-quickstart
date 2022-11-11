@@ -24,7 +24,7 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. 
-This is an app example an endpoint for saving messages and also a cron that calls same service.
+This is an app example with an endpoint for saving messages and also a cron that calls same service.
 
 ## Installation
 

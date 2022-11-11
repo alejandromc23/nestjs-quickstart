@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  server:
+    command: ./start.sh
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - ENV_FILE_PATH=.env
+    env_file:
+      - .env
+    ports:
+      - ${PORT:-3000}:${PORT:-3000}
+    volumes:
+      - .:/usr/src/app
+
+  redis_db:
+    image: 'redis:alpine'
+    container_name: redis_db
+    ports:
+      - ${REDIS_PORT:-6379}:${REDIS_PORT:-6379}
